@@ -7,6 +7,12 @@
     <title>Document</title>
 </head>
 <body>
-    
+    <h1>Here is your flight</h1>
+    displays information of flights
+    <ul>
+        <% flights.forEach((flightId, index) =>{ %>
+            <li><a href="/flights/<%=index %>"><%= flightId.name %></a></li>
+        <% })%>
+    </ul>
 </body>
 </html>
