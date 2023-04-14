@@ -7,8 +7,10 @@
 // app.get('/:index', 'some-function-defined-in-the-controller.show-which-should-be-defined-in-controller')
 // create a new route, is that something users should be able to do?
 
+const app = require('express').Router();
 const flightController = require("../controller/flightController");
 
-// 
 
-app.get("/", flightController.index);
+app.get("/", flightController.index)
+
+module.exports = app; 

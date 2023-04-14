@@ -1,22 +1,30 @@
+require('dotenv').config()
 const express = require('express')
-// import express from 'express'
 const app = express()
-require('dotenv').config();
+const logger = require('morgan')
+const methodOverride = require('method-override')
+
 const mongoose = require('mongoose');
 require('./config/flightsDatabase')
 const flightController = require('./controller/flightController');
 const Flight = require('./models/flightModel');
+const flightRouter = require('./routes/flightRouter')
 
 //set up view
 app.set('view engine', 'ejs')
 
+// MIDDLEWARE SECTION
+// Console.logs useful stuff about incoming requests
+app.use(logger('dev'));
+// Transforms request methods when we want to
+app.use(methodOverride('_method'))
+// Gives us form data as req.body
+app.use(express.urlencoded({ extended: false }));
+
+
+
 //set up routes
-
-
-  app.get("/flight/:index", (req, res) => {
-    const flightId = Flight[req.params.index];
-    res.render("shows", { flightId });
-  });
+app.use('/', flightRouter)
   
 
 
