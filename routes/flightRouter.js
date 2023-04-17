@@ -8,9 +8,13 @@
 // create a new route, is that something users should be able to do?
 
 const app = require('express').Router();
-const flightController = require("../controller/flightController");
+const flightsController = require("../controller/flightsController");
 
 
-app.get("/", flightController.index)
+app.get("/", flightsController.index)
+app.get('/new', flightsController.new)
+app.get('/:id', flightsController.show)
+app.post('/new', flightsController.create)
+// app.post('/:id', flightsController.update)
 
 module.exports = app; 

@@ -6,7 +6,7 @@ const methodOverride = require('method-override')
 
 const mongoose = require('mongoose');
 require('./config/flightsDatabase')
-const flightController = require('./controller/flightController');
+const flightController = require('./controller/flightsController');
 const Flight = require('./models/flightModel');
 const flightRouter = require('./routes/flightRouter')
 

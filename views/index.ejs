@@ -9,10 +9,11 @@
 <body>
     <h1>Here is your flight</h1>
     displays information of flights
-    <!-- <ul>
+    <ul>
         <% flights.forEach((flightId, index) =>{ %>
-            <li><a href="/flights/<%=index %>"><%= flightId.name %></a></li>
+            <li><a href="/<%=flightId._id %>">   <%=flightId.airline%> <%= flightId.flightNo %> 
+            <%flightId.airport%>  <%=flightId.departs%></a></li>
         <% })%>
-    </ul> -->
+    </ul>
 </body>
 </html>

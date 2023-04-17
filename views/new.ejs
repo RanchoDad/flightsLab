@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Form to make a new flight</h1>
+    <h3>One way only!</h3>
+    <form action="/new" method="POST">
+        <label for="airline">Airline:</label>
+        <select name="airline">
+            <option value="SW_Southwest">Southwest Airlines</option>
+            <option value="SPRT_Spirit">Spirit Airlines</option>
+            <option value="AA_American">American Airlines</option>
+            <option value="UA_United">United Airlines</option>
+        </select>
+        <br>
+        <label for="airport">Airport:</label>
+        <select name="airport">
+            <option value="PHX_Phoenix">Phoenix, PHX</option>
+            <option value="OAK_Oakland">Oakland, OAK</option>
+            <option value="PHL_Philadelphia">Philadelphia, PHL</option>
+            <option value="EWR_Newark">Newark, EWR</option>
+        </select>
+        <br>
+        <label for="flightNo" name="flightNo">Flight Number:</label>
+        <input type="number" name="flightNo">
+        <br>
+        <label for="departs" name="departs">Departure Date:</label>
+        <input type="Date" name="departs" >
+        <br>
+        <br><br><br>
+        
+
+        <h3>Add a destination</h3>
+            <label for="destinations.destAirport">Airport:</label>
+            <select name="destinations.destAirport"  >
+                <option value="PHX Phoenix">Phoenix, PHX</option>
+                <option value="OAK Oakland">Oakland, OAK</option>
+                <option value="PHL Philadelphia">Philadelphia, PHL</option>
+                <option value="EWR Newark">Newark, EWR</option>
+            </select>
+            <label for="arrival" name="arrival">Arrival Date:</label>
+            <input type="Date" name="arrival" >
+            <br>
+            <br>
+            <button type="submit">Submit</button>
+       
+    </form>
+</body>
+</html>
